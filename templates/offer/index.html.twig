@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}OnEmploi | Offres d'emploi
+{% endblock %}
+
+{% block body %}
+	<h1 class="d-center">Liste des offres d'emploi OnEmploi.com</h1>
+
+	<table>
+		<thead>
+			<tr>
+				<th>Titre de l'offre</th>
+				<th>Description</th>
+				<th>Rémunération</th>
+				<th>Date de création</th>
+				<th>Entreprise</th>
+			</tr>
+		</thead>
+
+		{% for offer in offers %}
+			<tbody>
+				<tr>
+					<td>{{offer.title}}</td>
+					<td>{{offer.description}}</td>
+					<td>{{offer.salary}}
+						Euros</td>
+					<td class="d-center">{{offer.createdAt | date('d/m/Y') }}</td>
+					<td>{{offer.author.name}}</td>
+					<td class="noLine">
+						<button class="btn_yellow btn_table">
+							<a href={{ path('app_offer_details', {'id' : offer.id} ) }}>Voir</a>
+						</button>
+					</td>
+				</tr>
+			</tbody>
+		{% endfor %}
+	</table>
+{% endblock %}

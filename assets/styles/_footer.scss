@@ -1,0 +1,69 @@
+.footer {
+    background-color: $fund;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 150px;
+    border-bottom: 30px solid $logo;
+    position: relative;
+
+    margin-top: 200px;
+
+    .yellow_tag {
+        display: flex;
+        background-color: $logo;
+        text-align: center;
+        align-items: center;
+        width: 15em;
+        box-shadow: 2px -2px 4px $fund;
+        border-top-right-radius: 10px;
+        position: absolute;
+        bottom: 150px;
+        left: 0;
+
+        i {
+            font-size: 30px;
+            padding: 10px;
+            margin-left: 35px;
+        }
+    }
+
+
+    .location_agence {
+        color: $logo;
+        margin-left: 45px;
+        line-height: 30px;
+    }
+
+    .network_agence {
+        display: flex;
+        font-size: 40px;
+        color: $logo;
+        margin: auto;
+
+        i {
+            margin: 0 20px;
+        }
+
+        i:hover {
+            cursor: pointer;
+            font-size: 60px;
+            transition: 0.8s;
+        }
+    }
+
+    .ml_agence {
+        font-size: 14px;
+        color: $logo;
+    }
+
+    .ml_agence:hover {
+        cursor: pointer;
+    }
+
+    .ml {
+        margin: 0 20px;
+        line-height: 30px;
+    }
+
+}

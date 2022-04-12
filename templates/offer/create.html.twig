@@ -1,0 +1,15 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Create a Job offer !
+{% endblock %}
+
+{% block body %}
+<div>
+		<h1{{ action == 'Edit' ? "Edit job offer #" ~ offer.id : 'Create Job Offer'}}</h1>
+
+		{{form_start(formulaire)}}
+		{{form_row(formulaire, {'attr': {'class': 'border-4'}})}}
+		<button type="submit" class="btn">{{action}}</button>
+		{{form_end(formulaire)}}
+	</div>
+{% endblock %}

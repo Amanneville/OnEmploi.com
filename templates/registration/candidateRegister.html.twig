@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}OnEmploi | Inscription Candidat
+{% endblock %}
+
+{% block body %}
+	<div class="div_register">
+		<h2>Formulaire d'inscription nouveau candidat</h2>
+		<p>Il est recommandé de compléter TOUS les champs</p>
+
+		<div class="formregister">
+			{{ form_start(registrationForm) }}
+
+			<div class="d-flex">
+				{{ form_row(registrationForm.name, {
+						label: 'Nom d\'utilisateur*' 
+						}) }}
+
+			{{ form_row(registrationForm.email, {
+						label: 'Adresse mail*' 
+						}) }}
+		</div>
+	
+		<div class="d-flex">
+			{{ form_row(registrationForm.city,{
+							label: 'Ville de résidence' 
+						}) }}
+
+			{{ form_row(registrationForm.telephon,{
+						label: 'Numéro de téléphone' 
+						}) }}
+		</div>
+<br>
+
+		<div class="d-flex">
+			{{ form_row(registrationForm.formation,{
+						label: 'Formation professionnelle*' 
+						}) }}
+
+			{{ form_row(registrationForm.diploma,{
+						label: 'Diplôme obtenu' 
+						}) }}
+		</div>
+<br>
+		<div class="d-flex">
+			{{ form_row(registrationForm.plainPassword, {
+						label: 'Choissez un mot de passe'
+						}) }}
+
+			{{ form_row(registrationForm.agreeTerms,{
+						label: ' Veuillez accepter les conditions d\'utilisation*'
+						}) }}
+		</div>
+
+		<div class="d-center">
+			<button type="submit" class="btn">Enregistrer</button>
+		</div>
+
+			{{ form_end(registrationForm) }}
+		</div>
+
+	</div>
+
+{% endblock %}

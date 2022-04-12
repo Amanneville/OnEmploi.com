@@ -1,0 +1,14 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Create a Job offer !
+{% endblock %}
+
+{% block body %}
+Offre N°  {{offer.id}}
+<ul>
+<li>{{offer.title}}</li>
+<li>{{offer.description}}</li>
+<li>{{offer.author.name}}</li>
+<li>{{offer.salary}} Euros</li>
+</ul>
+{% endblock %}

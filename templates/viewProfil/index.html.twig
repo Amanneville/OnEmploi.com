@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Profil Page{% endblock %}
+
+{% block body %}
+
+<div class="example-wrapper">
+
+{% if is_granted('ROLE_CANDIDATE') %}
+					<p>Bienvenue sur votre page profil "Candidat"</p>
+					<br>
+					{% include "candidate/index.html.twig" %}
+					{% endif %}
+
+
+
+
+{% if is_granted('ROLE_COMPANY') %}
+					<p>Bienvenue sur votre page profil "Entreprise"</p>
+					<br>
+					{% include "company/index.html.twig" %}
+					{% endif %}
+
+</div>
+{% endblock %}

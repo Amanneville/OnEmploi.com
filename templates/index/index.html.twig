@@ -1,0 +1,94 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}OnEmploi.com | Accueil
+{% endblock %}
+
+{% block body %}
+
+	<div class="index">
+
+		<div class="title_accueil">
+			<h1>Accueil</h1>
+			<h2>Agence pour emploi</h2>
+			{% if app.user %}
+				<p>Vous êtes connecté !</p>
+			{% else %}
+				<p>Connectez-vous pour accéder à nos services :</p>
+			{% endif %}
+		</div>
+
+		<div class="div_accueil">
+			{% if app.user %}
+				<div class="accueil_connect">
+					<p>Bienvenue,</p>
+					<p>
+						<strong>{{ app.user.name }} !</strong>
+					</p>
+					{% if is_granted('ROLE_CANDIDATE') %}
+						<p>
+							<i class="fas fa-user"></i>
+						</p>
+
+						<p>Vous êtes inscrit en tant que candidat(e).</p>
+					{% endif %}
+
+					{% if is_granted('ROLE_COMPANY') %}
+						<p>
+							<i class="fas fa-user-tie"></i>
+						</p>
+
+						<p>Vous êtes enregistré en tant qu'entreprise.</p>
+					{% endif %}
+
+					{# <button>
+					<a href={{ path('app_logout') }}>Déconnecter</a>
+					</button> #}
+
+				</div>
+			{% else %}
+
+
+				<div class="accueil_user">
+					<p>Vous êtes<br><strong>demandeur d'emploi
+						</strong>:</p>
+					<p>
+						<i class="fas fa-user"></i>
+					</p>
+
+					<button>
+						<a href={{ path('app_login') }}>Connexion</a>
+					</button>
+
+					<div class="inscript">
+						<p>ou
+							<a href={{ path('app_registration_candidateRegister') }}>Inscrivez-vous</a>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="accueil_business">
+					<p>Vous êtes<br><strong>une entreprise</strong>
+						:</p>
+					<p>
+						<i class="fas fa-user-tie"></i>
+					</p>
+
+					<button>
+						<a href={{ path('app_login') }}>Connection</a>
+					</button>
+
+					<div class="inscript">
+						<p>ou
+							<a href={{ path('app_registration_companyRegister') }}>Inscrivez-vous</a>
+						</p>
+					</div>
+
+				</div>
+			{% endif %}
+		</div>
+	</div>
+
+
+{% endblock %}

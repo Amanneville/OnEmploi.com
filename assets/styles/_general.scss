@@ -1,0 +1,101 @@
+.joker{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 50px;
+}
+// RESET
+*{
+    margin: 0;
+}
+// General
+body{
+    font-family: 'quick';
+}
+a{
+    text-decoration: none;
+}
+
+// Button
+button{
+    background-color: $fund;
+    height: 35px;
+    width: 100px;
+    font-family: 'qblod';
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: 1px 1px 5px black;
+    margin-bottom: 15px;
+    a{
+        text-decoration: none;
+        color: $logo;
+    }
+}
+
+button:hover{
+    background-color: $logo;
+    transition: 1s;
+    color: $fund;
+    cursor: pointer;
+    a{
+            color: $fund;
+    }
+}
+
+.btn_deco{
+    background-color: $logo;
+    height: 35px;
+    width: 110px;
+    font-family: 'qblod';
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: 1px 1px 5px black;
+    margin-bottom: 15px;
+    a{
+        text-decoration: none;
+        color: $fund;
+    }
+}
+
+.btn_deco:hover{
+    background-color: brown;
+    transition: 1s;
+    color: $logo;
+    cursor: pointer;
+    a{
+            color: $logo;
+    }
+}
+
+.btn_yellow{
+    background-color: $logo;
+    height: 35px;
+    width: 110px;
+    font-family: 'qblod';
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: 1px 1px 5px black;
+    margin-bottom: 15px;
+    a{
+        text-decoration: none;
+        color: $fund;
+    }
+}
+
+.btn_yellow:hover{
+    background-color: $fund;
+    transition: 1s;
+    color: $logo;
+    cursor: pointer;
+    a{
+            color: $logo;
+    }
+}
+
+
+.d-flex {
+    display: flex;
+}
+
+.d-center {
+    text-align: center;
+}

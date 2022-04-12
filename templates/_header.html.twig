@@ -1,0 +1,34 @@
+
+<div class="header">
+	<i class="fas fa-briefcase"></i>
+    <a href={{ path('app_index_index') }} title="Accueil"><h1>OnEmploi.com</h1></a>
+	
+
+	{% if app.user %}
+	<p class="info_connected">Vous êtes connecté en tant que <strong>{{ app.user.email }}</strong></p>
+	<button class="btn_deco">
+		<a class="nav-link text-white" href={{ path('app_logout') }} title="Se déconnecter">Déconnexion</a>
+	</button>
+    {% endif %}
+
+	{% if is_granted('ROLE_CANDIDATE') %}
+		<button class="btn_yellow btn1">
+			<a class="nav-link text-white" href={{ path('app_offer_index') }} title="Voir les offres proposées">Voir Offres</a>
+		</button>
+
+        <button class="btn_yellow btn2">
+			<a class="nav-link text-white" href={{ path('app_view_profil') }}  title="Vos informations personnelles">Profil</a>
+		</button>
+	{% endif %}
+
+    	{% if is_granted('ROLE_COMPANY') %}
+		<button class="btn_yellow btn1">
+			<a class="nav-link text-white" href={{ path('app_offer_create') }} title="Enregistrer une nouvelle offre">Nouvelle offre</a>
+		</button>
+
+        <button class="btn_yellow btn2">
+			<a class="nav-link text-white" href={{ path('app_view_profil') }}  title="Vos offres existantes et candidatures">Dashboard</a>
+		</button>
+	{% endif %}
+
+</div>

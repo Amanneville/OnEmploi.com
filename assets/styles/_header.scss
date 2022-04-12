@@ -1,0 +1,44 @@
+.header {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $fund;
+    position: relative;
+
+    i {
+        font-size: 50px;
+        color: $logo;
+    }
+
+    h1 {
+        margin-left: 20px;
+        font-size: 40px;
+        color: $logo;
+    }
+
+    .btn_deco{
+        position: absolute;
+        right: 5%;
+        top: 50%;
+    }
+
+   .info_connected{
+    position: absolute;
+    right: 5%;
+    top: 20%;
+    color: white;
+    font-size: 14px;
+    
+    }
+    .btn1{
+        position: absolute;
+        right: 12%;
+        top: 50%;
+    }
+    .btn2{
+        position: absolute;
+        right: 19%;
+        top: 50%;
+    }
+}

@@ -1,0 +1,10 @@
+{# {% extends 'base.html.twig' %} #}
+
+{% block title %}Page Profil Entreprise : {% endblock %}
+
+{% block body %}
+<p>Vous êtes connecté en tant que : {{ app.user.email }}</p>
+<br>
+<h2>Vos informations :</h2>
+<p>{{ app.user.email }}</p>
+{% endblock %}

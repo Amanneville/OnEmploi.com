@@ -1,0 +1,62 @@
+// .index {
+//     background-image: url(../../public/images/pixaba.jpg);
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     background-position-x: right;
+//     margin-bottom: -50px;
+// }
+
+.title_accueil {
+    text-align: center;
+    padding-top: 50px;
+
+    h2 {
+        margin-bottom: 20px;
+    }
+}
+
+.div_accueil {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+    .accueil_connect,
+    .accueil_user,
+    .accueil_business {
+        padding: 60px;
+        border: 4px solid $fund;
+        margin: 40px 40px 150px 40px;
+        border-radius: 10px;
+        box-shadow: 1px 1px 4px black;
+        width: 180px;
+        height: 270px;
+        background-color: white;
+
+        p {
+            line-height: 30px;
+        }
+
+        .inscript {
+            margin-top: 15px;
+
+            a {
+                text-decoration: none;
+                margin-top: 10px;
+                font-size: 14px;
+                color: $fund;
+                font-family: 'qblod';
+            }
+
+            a:hover {
+                font-size: 16px;
+                transition: 0.8s;
+            }
+        }
+
+        i {
+            font-size: 100px;
+            color: $fund;
+            margin: 30px 0 10px 0;
+        }
+    }
+}
